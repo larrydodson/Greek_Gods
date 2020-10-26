@@ -1,2 +1,2 @@
-## Greek and Roman gods, name by number of search results.
+## Greek and Roman gods. The name by number of search results.
 
