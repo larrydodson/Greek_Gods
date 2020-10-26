@@ -14,8 +14,9 @@ var trace1 = {
     x: data1.map(row => row.greekSearchResults),
     y: data1.map(row => row.greekName),
     text: data1.map(row => row.greekName),
-    name: "Greek",
+    name: "Greek gods",
     marker: { color: '#004c99' },
+    width: 1.0,
     type: "bar",
     orientation: "h"
 };
@@ -39,8 +40,9 @@ var trace2 = {
     x: data2.map(row => row.romanSearchResults),
     y: data2.map(row => row.romanName),
     text: data.map(row => row.romanName),
-    name: "Roman",
+    name: "Roman gods",
     marker: { color: '#6600cc' },
+    width: 1.0,
     type: "bar",
     orientation: "h"
 };
@@ -74,3 +76,20 @@ var layout2 = {
 
 // Render the plot to the div tag with id "plot"
 Plotly.newPlot("plot2", data2, layout2);
+
+var data3 = [trace1, trace2];
+
+// Apply the group bar mode to the layout
+var layout3 = {
+    title: "Greek and Roman gods search results",
+    bargap: 5.0,
+    margin: {
+        l: 100,
+        r: 100,
+        t: 40,
+        b: 10
+    }
+};
+
+// Render the plot to the div tag with id "plot"
+Plotly.newPlot("plot3", data3, layout3);
